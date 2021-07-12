@@ -96,5 +96,33 @@ namespace CustomHashTable
             }
             return default(V);
         }
+
+        //remove for hashtable
+        public void Remove(K Key)
+        {
+            int pos = GetArrayPosition(Key);
+            LinkedList<KeyValue<K, V>> list = GetLinkedList(pos);
+            bool found = false;
+            KeyValue<K, V> keyVal = default(KeyValue<K, V>);
+            foreach (KeyValue<K, V> i in list)
+            {
+                if (i.Key.Equals(Key))
+                {
+                    found = true;
+                    keyVal = i;
+                    break;
+                }
+            }
+            if (found)
+            {
+                list.Remove(keyVal);
+                Console.WriteLine("Succesfully Removed");
+
+            }
+            else
+            {
+                Console.WriteLine("Not Found");
+            }
+        }
     }
 }

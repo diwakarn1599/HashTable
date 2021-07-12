@@ -32,9 +32,15 @@ namespace CustomHashTable
                     map.Add(arr[i], 1);
                 }
             }
-           
+            Console.WriteLine("Enter the string you want to remove");
+            string remove = Console.ReadLine().ToLower();
             //printing values with frequency
             foreach(var i in set)
+            {
+                Console.WriteLine($"{i}---> {map.Get(i)}");
+            }
+            map.Remove(remove);
+            foreach (var i in set)
             {
                 Console.WriteLine($"{i}---> {map.Get(i)}");
             }
