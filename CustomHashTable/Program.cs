@@ -10,7 +10,7 @@ namespace CustomHashTable
         {
             Console.WriteLine("Custom Hash Table");
             //string to be set in hashtable
-            string str = "To be or not to be".ToLower();
+            string str = "Paranoids are not paranoid because they are paranoid but because they keep putting themselves deliberately into paranoid avoidable situations".ToLower();
             //converting string to array
             string[] arr = str.Split();
 
